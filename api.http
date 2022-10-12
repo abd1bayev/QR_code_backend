@@ -1,0 +1,49 @@
+// Register
+POST http://localhost:8000/api/v1/register/
+Content-Type: application/json
+
+{
+    "username": "ziyacivan",
+    "password": "123456",
+    "email": "yusufziyacivan@gmail.com"
+}
+
+// Login
+POST http://localhost:8000/api/v1/login/
+Content-Type: application/json
+
+{
+    "username": "ziyacivan",
+    "password": "123456"
+}
+
+// Logout
+POST http://localhost:8000/api/v1/logout/
+Content-Type: application/json
+Authorization: Token b550062d5fc3b81dda4c8287424c6bc0f8e6d5cb
+
+// Profile
+GET http://localhost:8000/api/v1/profile/
+Content-Type: application/json
+Authorization: Token b550062d5fc3b81dda4c8287424c6bc0f8e6d5cb
+
+// Generate Code
+POST http://localhost:8000/api/v1/qrcodes/generate/
+Content-Type: application/json
+Authorization: Token b550062d5fc3b81dda4c8287424c6bc0f8e6d5cb
+
+{
+    "name": "QRCode Generator",
+    "description": "This is a QRCode generator app",
+    "url": "https://github.com/ziyacivan/qrcode-generator-api"
+}
+
+// QR Code List
+GET http://localhost:8000/api/v1/qrcodes/
+Content-Type: application/json
+Authorization: Token b550062d5fc3b81dda4c8287424c6bc0f8e6d5cb
+
+// QR Code Detail
+GET http://localhost:8000/api/v1/qrcodes/4/
+Content-Type: application/json
+Authorization: Token b550062d5fc3b81dda4c8287424c6bc0f8e6d5cb
